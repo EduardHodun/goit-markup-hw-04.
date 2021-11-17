@@ -201,6 +201,8 @@ bg-тёмно серый---2F303A
 
 .header-mail {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -235,6 +237,23 @@ bg-тёмно серый---2F303A
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color);
+}
+
+.header-mail-icon {
+  margin-right: 10px;
+  --color4: currentColor;
+}
+
+.header-tel-icon {
+  margin-right: 10px;
+  --color4: currentColor;
+}
+
+.header-mail-link:focus,
+.header-mail-link:hover,
+.header-tel-link:focus,
+.header-tel-link:hover {
+  --color4: var(--accent-color);
 }
 
 /* MAIN */
@@ -464,6 +483,8 @@ bg-тёмно серый---2F303A
   flex-direction: column;
 
   background-color: var(--team-cards-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
   /* min-width: 270px; */
@@ -518,21 +539,73 @@ bg-тёмно серый---2F303A
   padding: 12px;
 }
 
-/* .list-icon-item .team-social-link:hover,
-.list-icon-item .team-social-link:focus {
-  background: var(--accent-color);
-  fill: var(--primary-title-color);
-} */
-
 .list-icon-item .team-social-link:hover,
 .list-icon-item .team-social-link:focus {
   background: var(--accent-color);
-  --color5: #ffffff;
+  --color5: var(--accent-color-icon);
 }
 
-/* .icon-instagram {
-  fill: #afb1b8;
-} */
+/* Постоянные клиенты */
+
+.klients-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+}
+
+.klients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.klients-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: calc((100% - 150px) / 6); */
+  /* margin-right: 30px;
+  margin-bottom: 30px; */
+}
+
+.klients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  color: var(--standart-color-icon);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.klients-list-icon {
+  --color3: currentColor;
+}
+
+.klients-list-item .klients-list-icon:focus,
+.klients-list-item .klients-list-icon:hover {
+  --color3: var(--accent-color);
+}
 
 /* FOOTER */
 
@@ -602,7 +675,7 @@ bg-тёмно серый---2F303A
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .container {
+.footer-contacts {
   display: flex;
   flex-direction: column;
 }
@@ -615,6 +688,64 @@ bg-тёмно серый---2F303A
 
 .footer-list-item:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* fotter-social-links */
+
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 70px;
+}
+
+.footer-title-link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  color: var(--primary-title-color);
+}
+
+.footer-social-list {
+  display: flex;
+
+  /* border: 2px solid tomato; */
+
+  width: 206px;
+  height: 80px;
+}
+
+.footer-social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-social-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+
+  --color5: #ffffff;
+
+  border-radius: 50%;
+}
+
+.footer-social-list-item:focus,
+.footer-social-list-item:hover {
+  background-color: var(--accent-color);
 }
 
 /* PORTFOLIO */
@@ -763,6 +894,12 @@ bg-тёмно серый---2F303A
 
   color: var(--primary-text-color);
 }
+
+.gallery-link:hover,
+.gallery-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+/* -------------footer-------------- */
+
 
 /* CONTACTS */
 
